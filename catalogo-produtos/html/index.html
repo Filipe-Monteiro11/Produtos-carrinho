@@ -34,6 +34,56 @@
     <!-- Os cards de produto serão gerados pelo script.js -->
   </main>
 
+  <!-- ===== RODAPÉ ===== -->
+  <footer class="rodape">
+    <div class="rodape__conteudo">
+
+      <div class="rodape__coluna">
+        <h3><i class="fa-solid fa-store"></i> Minha Produtora</h3>
+        <p>Distribuição de alimentos com qualidade e preço justo.
+           Escolha no catálogo e finalize a compra pelo WhatsApp.</p>
+        <div class="rodape__redes">
+          <a href="https://wa.me/5511999999999" target="_blank" rel="noopener"
+             class="rodape__social" title="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="#" class="rodape__social" title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#" class="rodape__social" title="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="rodape__coluna">
+        <h4>Links rápidos</h4>
+        <ul>
+          <li><a href="#">Início</a></li>
+          <li><a href="#gradeProdutos">Produtos</a></li>
+          <li><a href="#">Como comprar</a></li>
+          <li><a href="#">Atendimento</a></li>
+        </ul>
+      </div>
+
+      <div class="rodape__coluna">
+        <h4>Contato</h4>
+        <ul>
+          <li><i class="fa-brands fa-whatsapp"></i> (11) 99999-9999</li>
+          <li><i class="fa-solid fa-envelope"></i> contato@minhaprodutora.com.br</li>
+          <li><i class="fa-solid fa-location-dot"></i> Sua cidade - UF</li>
+          <li><i class="fa-solid fa-clock"></i> Seg. a Sex., 8h às 18h</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="rodape__base">
+      <p>&copy; 2026 Minha Produtora — Todos os direitos reservados.</p>
+      <p>Site de apresentação — pedidos finalizados pelo WhatsApp.</p>
+    </div>
+  </footer>
+
   <!-- ===== MODAL DE DETALHE DO PRODUTO ===== -->
   <div class="modal" id="modalProduto">
     <div class="modal__conteudo">
@@ -47,14 +97,13 @@
         <p id="modalDescricao"></p>
         <p class="modal__preco" id="modalPreco"></p>
         <button class="btn-adicionar" id="btnAdicionar">
-          <i class="fa-solid fa-cart-plus"></i>
-          Adicionar ao carrinho
+          <i class="fa-solid fa-cart-plus"></i> Adicionar ao carrinho
         </button>
       </div>
     </div>
   </div>
 
-  <!-- ===== PAINEL DO CARRINHO (abre pelo lado direito) ===== -->
+  <!-- ===== PAINEL DO CARRINHO ===== -->
   <aside class="carrinho" id="painelCarrinho">
     <div class="carrinho__topo">
       <h2>Seu carrinho</h2>
@@ -72,10 +121,8 @@
         <span>Total</span>
         <strong id="totalCarrinho">R$ 0,00</strong>
       </div>
-
       <button class="btn-finalizar" id="btnFinalizar">
-        <i class="fa-brands fa-whatsapp"></i>
-        Finalizar compra pelo WhatsApp
+        <i class="fa-brands fa-whatsapp"></i> Finalizar compra pelo WhatsApp
       </button>
       <p class="carrinho__aviso">
         Ao finalizar, você será direcionado ao nosso WhatsApp para combinar a compra.
@@ -83,13 +130,11 @@
     </div>
   </aside>
 
-  <!-- ===== CAMADA ESCURA AO FUNDO (quando modal/carrinho abre) ===== -->
+  <!-- ===== CAMADA ESCURA AO FUNDO ===== -->
   <div class="overlay" id="overlay"></div>
 
-  <!-- ===== AVISO FLUTUANTE (ex.: "Produto adicionado!") ===== -->
+  <!-- ===== AVISO FLUTUANTE ===== -->
   <div class="toast" id="toast"></div>
-
-  
 
   <script src="js/script.js"></script>
 </body>
