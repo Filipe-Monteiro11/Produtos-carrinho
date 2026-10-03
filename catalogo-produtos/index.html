@@ -4,9 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Catálogo de Produtos</title>
+  <!-- Fonte moderna: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <!-- Biblioteca de ícones: Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <!-- Paleta: preto + verde claro -->
+  <!-- Paleta: preto + verde -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -14,8 +18,11 @@
   <!-- ===== CABEÇALHO ===== -->
   <header class="header">
     <div class="header__logo">
-      <h1><i class="fa-solid fa-store"></i> Minha Produtora</h1>
-      <p>Catálogo de produtos</p>
+      <span class="header__marca"><i class="fa-solid fa-leaf"></i></span>
+      <div>
+        <h1>Minha Produtora</h1>
+        <p>Catálogo de produtos</p>
+      </div>
     </div>
     <button class="header__cart" id="btnCarrinho">
       <i class="fa-solid fa-cart-shopping"></i>
@@ -23,6 +30,21 @@
       <span class="header__badge" id="badgeCarrinho">0</span>
     </button>
   </header>
+
+  <!-- ===== BANNER DE DESTAQUE ===== -->
+  <section class="hero">
+    <div class="hero__conteudo">
+      <span class="hero__selo">Distribuição de alimentos</span>
+      <h2>Qualidade e preço justo<br>para o seu comércio</h2>
+      <p>Escolha os produtos no catálogo, monte seu pedido e finalize a compra diretamente pelo WhatsApp. Simples e rápido.</p>
+      <div class="hero__acoes">
+        <a href="#gradeProdutos" class="hero__btn hero__btn--primario">Ver produtos</a>
+        <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" class="hero__btn hero__btn--contorno">
+          <i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
 
   <!-- ===== FILTRO POR CATEGORIA ===== -->
   <section class="categorias" id="filtros">
@@ -39,12 +61,10 @@
     <div class="rodape__conteudo">
 
       <div class="rodape__coluna">
-        <h3><i class="fa-solid fa-store"></i> Minha Produtora</h3>
-        <p>Distribuição de alimentos com qualidade e preço justo.
-           Escolha no catálogo e finalize a compra pelo WhatsApp.</p>
+        <h3><i class="fa-solid fa-leaf"></i> Minha Produtora</h3>
+        <p>Distribuição de alimentos com qualidade e preço justo. Escolha no catálogo e finalize a compra pelo WhatsApp.</p>
         <div class="rodape__redes">
-          <a href="https://wa.me/5511999999999" target="_blank" rel="noopener"
-             class="rodape__social" title="WhatsApp">
+          <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" class="rodape__social" title="WhatsApp">
             <i class="fa-brands fa-whatsapp"></i>
           </a>
           <a href="#" class="rodape__social" title="Instagram">
@@ -74,6 +94,14 @@
           <li><i class="fa-solid fa-location-dot"></i> Sua cidade - UF</li>
           <li><i class="fa-solid fa-clock"></i> Seg. a Sex., 8h às 18h</li>
         </ul>
+      </div>
+
+      <div class="rodape__coluna">
+        <h4>Compre pelo WhatsApp</h4>
+        <p>Monte seu pedido no catálogo e finalize direto no nosso WhatsApp.</p>
+        <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" class="rodape__cta">
+          <i class="fa-brands fa-whatsapp"></i> Finalizar pedido
+        </a>
       </div>
 
     </div>

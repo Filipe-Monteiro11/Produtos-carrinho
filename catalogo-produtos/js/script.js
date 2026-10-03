@@ -1,16 +1,16 @@
 /* =====================================================
-   CATÁLOGO DE PRODUTOS — Script principal
-   Paleta: preto + verde claro | Finalização via WhatsApp
+   CATALOGO DE PRODUTOS - Script principal
+   Paleta: preto + verde | Finalizacao via WhatsApp
    ===================================================== */
 
-/* ===== CONFIGURAÇÃO ===== */
-// 👉 TROQUE AQUI pelo número real da empresa (DDI + DDD + número, sem espaços)
+/* ===== CONFIGURACAO ===== */
+/* TROQUE AQUI pelo numero real da empresa (DDI + DDD + numero, sem espacos) */
 const NUMERO_WHATSAPP = "55 81 9718-8123";
 
-// 👉 Nome da loja (aparece na mensagem do WhatsApp)
+/* Nome da loja (aparece na mensagem do WhatsApp) */
 const NOME_LOJA = "Minha Produtora";
 
-/* ===== PRODUTOS DE EXEMPLO ===== */
+/* ===== PRODUTOS (apenas 1 por enquanto) ===== */
 const PRODUTOS = [
   {
     id: 1,
@@ -19,101 +19,13 @@ const PRODUTOS = [
     preco: 28.90,
     icone: "fa-bowl-rice",
     descricao: "Arroz tipo 1, pacote de 5kg. Ideal para o dia a dia, soltinho e de alta qualidade."
-  },
-  {
-    id: 2,
-    nome: "Feijão Carioca",
-    categoria: "Grãos",
-    preco: 7.50,
-    icone: "fa-seedling",
-    descricao: "Feijão carioca selecionado, pacote de 1kg. Cozimento rápido e saboroso."
-  },
-  {
-    id: 3,
-    nome: "Farinha de Trigo",
-    categoria: "Grãos",
-    preco: 22.00,
-    icone: "fa-wheat-awn",
-    descricao: "Farinha de trigo especial para pães e massas, pacote de 5kg."
-  },
-  {
-    id: 4,
-    nome: "Café Torrado e Moído",
-    categoria: "Bebidas",
-    preco: 18.90,
-    icone: "fa-mug-hot",
-    descricao: "Café torrado e moído, pacote de 500g. Aroma e sabor intensos."
-  },
-  {
-    id: 5,
-    nome: "Água Mineral",
-    categoria: "Bebidas",
-    preco: 6.50,
-    icone: "fa-bottle-water",
-    descricao: "Água mineral sem gás, garrafa de 1,5 litros."
-  },
-  {
-    id: 6,
-    nome: "Óleo de Soja",
-    categoria: "Mercearia",
-    preco: 7.90,
-    icone: "fa-bottle-droplet",
-    descricao: "Óleo de soja refinado, garrafa de 900ml."
-  },
-  {
-    id: 7,
-    nome: "Açúcar Cristal",
-    categoria: "Mercearia",
-    preco: 19.50,
-    icone: "fa-cubes",
-    descricao: "Açúcar cristal, saco de 5kg. Ideal para o comércio."
-  },
-  {
-    id: 8,
-    nome: "Molho de Tomate",
-    categoria: "Mercearia",
-    preco: 3.90,
-    icone: "fa-jar",
-    descricao: "Molho de tomate tradicional, pote de 340g."
-  },
-  {
-    id: 9,
-    nome: "Milho Verde",
-    categoria: "Enlatados",
-    preco: 4.20,
-    icone: "fa-can-food",
-    descricao: "Milho verde em conserva, lata de 200g."
-  },
-  {
-    id: 10,
-    nome: "Sardinha em Óleo",
-    categoria: "Enlatados",
-    preco: 6.80,
-    icone: "fa-fish-fins",
-    descricao: "Sardinha em óleo comestível, lata de 125g."
-  },
-  {
-    id: 11,
-    nome: "Macarrão Espaguete",
-    categoria: "Padaria e Massas",
-    preco: 4.90,
-    icone: "fa-utensils",
-    descricao: "Espaguete de sêmola, pacote de 500g."
-  },
-  {
-    id: 12,
-    nome: "Ovos Brancos",
-    categoria: "Padaria e Massas",
-    preco: 12.00,
-    icone: "fa-egg",
-    descricao: "Ovos brancos tamanho grande, cartela com 12 unidades."
   }
 ];
 
 /* ===== ESTADO DO CARRINHO ===== */
 let carrinho = [];
 
-/* ===== ELEMENTOS DA PÁGINA ===== */
+/* ===== ELEMENTOS DA PAGINA ===== */
 const gradeProdutos = document.getElementById("gradeProdutos");
 const filtros = document.getElementById("filtros");
 const modalProduto = document.getElementById("modalProduto");
@@ -124,9 +36,9 @@ const badgeCarrinho = document.getElementById("badgeCarrinho");
 const totalCarrinho = document.getElementById("totalCarrinho");
 const itensCarrinho = document.getElementById("itensCarrinho");
 
-let produtoSelecionado = null; // produto aberto no modal
+let produtoSelecionado = null;
 
-/* ===== FUNÇÕES AUXILIARES ===== */
+/* ===== FUNCOES AUXILIARES ===== */
 function formatarPreco(valor) {
   return valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 }
@@ -174,7 +86,7 @@ function renderizarCategorias() {
   });
 }
 
-/* ===== RENDERIZAR PRODUTOS ===== */
+/* ===== RENDERIZAR PRODUTOS (com botao Adicionar no card) ===== */
 function renderizarProdutos(categoria = "Todos") {
   const lista = categoria === "Todos"
     ? PRODUTOS
@@ -188,6 +100,9 @@ function renderizarProdutos(categoria = "Todos") {
           <span class="produto__categoria">${p.categoria}</span>
           <h3 class="produto__nome">${p.nome}</h3>
           <p class="produto__preco">${formatarPreco(p.preco)}</p>
+          <button class="produto__btn" data-add="${p.id}">
+            <i class="fa-solid fa-cart-plus"></i> Adicionar
+          </button>
         </div>
       </div>
     `)
@@ -195,6 +110,14 @@ function renderizarProdutos(categoria = "Todos") {
 
   gradeProdutos.querySelectorAll(".produto").forEach(card => {
     card.addEventListener("click", () => abrirModal(Number(card.dataset.id)));
+  });
+
+  gradeProdutos.querySelectorAll("[data-add]").forEach(btn => {
+    btn.addEventListener("click", e => {
+      e.stopPropagation();
+      adicionarAoCarrinho(Number(btn.dataset.add));
+      mostrarToast("Produto adicionado ao carrinho!");
+    });
   });
 }
 
@@ -357,7 +280,7 @@ document.getElementById("btnFinalizar").addEventListener("click", () => {
     .map(item => {
       const p = PRODUTOS.find(prod => prod.id === item.id);
       const subtotal = p ? p.preco * item.quantidade : 0;
-      return `• ${p.nome} - ${item.quantidade}x - ${formatarPreco(subtotal)}`;
+      return `- ${p.nome}: ${item.quantidade}x - ${formatarPreco(subtotal)}`;
     })
     .join("\n");
 
@@ -373,7 +296,7 @@ document.getElementById("btnFinalizar").addEventListener("click", () => {
   window.open(url, "_blank");
 });
 
-/* ===== INICIALIZAÇÃO ===== */
+/* ===== INICIALIZACAO ===== */
 carregarCarrinho();
 renderizarCategorias();
 renderizarProdutos();
