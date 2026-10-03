@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Produtos</title>
+  <!-- Biblioteca de ícones: Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <!-- Paleta: preto + verde claro -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== CABEÇALHO ===== -->
+  <header class="header">
+    <div class="header__logo">
+      <h1><i class="fa-solid fa-store"></i> Minha Produtora</h1>
+      <p>Catálogo de produtos</p>
+    </div>
+    <button class="header__cart" id="btnCarrinho">
+      <i class="fa-solid fa-cart-shopping"></i>
+      Carrinho
+      <span class="header__badge" id="badgeCarrinho">0</span>
+    </button>
+  </header>
+
+  <!-- ===== FILTRO POR CATEGORIA ===== -->
+  <section class="categorias" id="filtros">
+    <!-- Os botões de categoria serão gerados pelo script.js -->
+  </section>
+
+  <!-- ===== GRADE DE PRODUTOS ===== -->
+  <main class="produtos" id="gradeProdutos">
+    <!-- Os cards de produto serão gerados pelo script.js -->
+  </main>
+
+  <!-- ===== MODAL DE DETALHE DO PRODUTO ===== -->
+  <div class="modal" id="modalProduto">
+    <div class="modal__conteudo">
+      <button class="modal__fechar" id="fecharModal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal__imagem" id="modalImagem"></div>
+      <div class="modal__info">
+        <span class="modal__categoria" id="modalCategoria"></span>
+        <h2 id="modalNome"></h2>
+        <p id="modalDescricao"></p>
+        <p class="modal__preco" id="modalPreco"></p>
+        <button class="btn-adicionar" id="btnAdicionar">
+          <i class="fa-solid fa-cart-plus"></i>
+          Adicionar ao carrinho
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PAINEL DO CARRINHO (abre pelo lado direito) ===== -->
+  <aside class="carrinho" id="painelCarrinho">
+    <div class="carrinho__topo">
+      <h2>Seu carrinho</h2>
+      <button class="carrinho__fechar" id="fecharCarrinho">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="carrinho__itens" id="itensCarrinho">
+      <!-- Os itens do carrinho serão gerados pelo script.js -->
+    </div>
+
+    <div class="carrinho__rodape">
+      <div class="carrinho__total">
+        <span>Total</span>
+        <strong id="totalCarrinho">R$ 0,00</strong>
+      </div>
+
+      <button class="btn-finalizar" id="btnFinalizar">
+        <i class="fa-brands fa-whatsapp"></i>
+        Finalizar compra pelo WhatsApp
+      </button>
+      <p class="carrinho__aviso">
+        Ao finalizar, você será direcionado ao nosso WhatsApp para combinar a compra.
+      </p>
+    </div>
+  </aside>
+
+  <!-- ===== CAMADA ESCURA AO FUNDO (quando modal/carrinho abre) ===== -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- ===== AVISO FLUTUANTE (ex.: "Produto adicionado!") ===== -->
+  <div class="toast" id="toast"></div>
+
+  
+
+  <script src="js/script.js"></script>
+</body>
+</html>
