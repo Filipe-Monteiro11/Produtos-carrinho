@@ -19,6 +19,38 @@ const PRODUTOS = [
     preco: 28.90,
     icone: "fa-bowl-rice",
     descricao: "Arroz tipo 1, pacote de 5kg. Ideal para o dia a dia, soltinho e de alta qualidade."
+  },
+  {
+    id: 2,
+    nome: "Feijão Carioca",
+    categoria: "Grãos",
+    preco: 7.50,
+    icone: "fa-seedling",
+    descricao: "Feijão carioca selecionado, pacote de 1kg. Cozimento rápido e saboroso."
+  },
+  {
+    id: 3,
+    nome: "Óleo de Soja",
+    categoria: "Mercearia",
+    preco: 7.90,
+    icone: "fa-bottle-droplet",
+    descricao: "Óleo de soja refinado, garrafa de 900ml."
+  },
+  {
+    id: 4,
+    nome: "Açúcar Cristal",
+    categoria: "Mercearia",
+    preco: 19.50,
+    icone: "fa-cubes",
+    descricao: "Açúcar cristal, saco de 5kg. Ideal para o comércio."
+  },
+  {
+    id: 5,
+    nome: "Café Torrado e Moído",
+    categoria: "Bebidas",
+    preco: 18.90,
+    icone: "fa-mug-hot",
+    descricao: "Café torrado e moído, pacote de 500g. Aroma e sabor intensos."
   }
 ];
 
