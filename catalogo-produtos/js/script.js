@@ -4,8 +4,8 @@
    ===================================================== */
 
 /* ===== CONFIGURACAO ===== */
-/* TROQUE AQUI pelo numero real da empresa (DDI + DDD + numero, sem espacos) */
-const NUMERO_WHATSAPP = "55 81 9718-8123";
+/* Numero real da empresa (DDI + DDD + numero, sem espacos) */
+const NUMERO_WHATSAPP = "558197188123";
 
 /* Nome da loja (aparece na mensagem do WhatsApp) */
 const NOME_LOJA = "Minha Produtora";

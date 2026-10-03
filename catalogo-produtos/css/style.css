@@ -9,7 +9,7 @@
   --card: #151b16;
   --card-hover: #1a211b;
   --borda: #242e27;
-  --verde: #4ade80;            /* verde suave principal */
+  --verde: #4ade80;
   --verde-claro: #86efac;
   --verde-fundo: rgba(74, 222, 128, 0.08);
   --branco: #f4f7f5;
@@ -164,13 +164,6 @@ body {
 
 .hero__btn--primario { background: var(--verde); color: #062a12; }
 .hero__btn--primario:hover { background: var(--verde-claro); }
-
-.hero__btn--contorno {
-  border: 1px solid var(--borda);
-  color: var(--branco);
-}
-
-.hero__btn--contorno:hover { border-color: var(--verde); color: var(--verde); }
 
 /* ===== FILTRO DE CATEGORIAS ===== */
 .categorias {
@@ -599,23 +592,6 @@ body {
 }
 
 .rodape__social:hover { border-color: var(--verde); color: var(--verde); }
-
-.rodape__cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 12px;
-  background: var(--verde);
-  color: #062a12;
-  font-weight: 700;
-  font-size: 0.9rem;
-  padding: 11px 18px;
-  border-radius: 10px;
-  text-decoration: none;
-  transition: 0.2s;
-}
-
-.rodape__cta:hover { background: var(--verde-claro); }
 
 .rodape__base {
   border-top: 1px solid var(--borda);
