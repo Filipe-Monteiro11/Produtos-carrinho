@@ -14,43 +14,83 @@ const NOME_LOJA = "Minha Produtora";
 const PRODUTOS = [
   {
     id: 1,
-    nome: "Arroz Tipo 1",
-    categoria: "Grãos",
-    preco: 28.90,
-    icone: "fa-bowl-rice",
-    descricao: "Arroz tipo 1, pacote de 5kg. Ideal para o dia a dia, soltinho e de alta qualidade."
+    nome: "Detergente de Louças",
+    categoria: "Cozinha",
+    preco: 3.90,
+    icone: "fa-bottle-droplet",
+    descricao: "Detergente neutro concentrado, garrafa de 500ml. Alto rendimento e ótima espuma."
   },
   {
     id: 2,
-    nome: "Feijão Carioca",
-    categoria: "Grãos",
-    preco: 7.50,
-    icone: "fa-seedling",
-    descricao: "Feijão carioca selecionado, pacote de 1kg. Cozimento rápido e saboroso."
+    nome: "Sabão em Pó",
+    categoria: "Lavanderia",
+    preco: 15.90,
+    icone: "fa-hand-sparkles",
+    descricao: "Sabão em pó multiuso, pacote de 1kg. Remove manchas e deixa a roupa perfumada."
   },
   {
     id: 3,
-    nome: "Óleo de Soja",
-    categoria: "Mercearia",
-    preco: 7.90,
-    icone: "fa-bottle-droplet",
-    descricao: "Óleo de soja refinado, garrafa de 900ml."
+    nome: "Água Sanitária",
+    categoria: "Limpeza Geral",
+    preco: 6.90,
+    icone: "fa-fill-drip",
+    descricao: "Água sanitária com cloro ativo, garrafa de 1 litro. Limpa, desinfeta e branqueia."
   },
   {
     id: 4,
-    nome: "Açúcar Cristal",
-    categoria: "Mercearia",
-    preco: 19.50,
-    icone: "fa-cubes",
-    descricao: "Açúcar cristal, saco de 5kg. Ideal para o comércio."
+    nome: "Desinfetante",
+    categoria: "Banheiro",
+    preco: 8.90,
+    icone: "fa-spray-can",
+    descricao: "Desinfetante com aroma de pinho, frasco de 500ml. Elimina germes e bactérias."
   },
   {
     id: 5,
-    nome: "Café Torrado e Moído",
-    categoria: "Bebidas",
-    preco: 18.90,
-    icone: "fa-mug-hot",
-    descricao: "Café torrado e moído, pacote de 500g. Aroma e sabor intensos."
+    nome: "Multiuso",
+    categoria: "Limpeza Geral",
+    preco: 7.50,
+    icone: "fa-spray-can-sparkles",
+    descricao: "Limpa multiuso concentrado, frasco de 500ml. Ideal para superfícies diversas."
+  },
+  {
+    id: 6,
+    nome: "Limpa Vidros",
+    categoria: "Limpeza Geral",
+    preco: 5.90,
+    icone: "fa-droplet",
+    descricao: "Limpa vidros e espelhos sem deixar marcas, frasco de 500ml."
+  },
+  {
+    id: 7,
+    nome: "Sabão em Barra",
+    categoria: "Lavanderia",
+    preco: 3.50,
+    icone: "fa-soap",
+    descricao: "Sabão em barra glicerinado, 200g. Ótimo para lavagem de roupas e manchas difíceis."
+  },
+  {
+    id: 8,
+    nome: "Amaciante de Roupas",
+    categoria: "Lavanderia",
+    preco: 13.90,
+    icone: "fa-jar",
+    descricao: "Amaciante concentrado com aroma duradouro, garrafa de 2 litros."
+  },
+  {
+    id: 9,
+    nome: "Esponja Multiuso",
+    categoria: "Cozinha",
+    preco: 2.50,
+    icone: "fa-sponge",
+    descricao: "Esponja dupla face com lã de aço, ideal para louças e superfícies."
+  },
+  {
+    id: 10,
+    nome: "Limpa Pedra Sanitária",
+    categoria: "Banheiro",
+    preco: 9.90,
+    icone: "fa-toilet",
+    descricao: "Limpa pedra sanitária com cloro, frasco de 750ml. Remove manchas e desinfeta."
   }
 ];
 
